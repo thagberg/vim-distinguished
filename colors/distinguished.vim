@@ -24,7 +24,6 @@
 		for [group, group_colors] in items(a:color_dict)
 			exec 'hi ' . group
 				\ . ' ctermfg=' . (group_colors[0] == '' ? 'NONE' :       group_colors[0])
-				\ . ' ctermbg=' . (group_colors[1] == '' ? 'NONE' :       group_colors[1])
 				\ . '   cterm=' . (group_colors[2] == '' ? 'NONE' :       group_colors[2])
 				\
 				\ . '   guifg=' . (group_colors[3] == '' ? 'NONE' : '#' . group_colors[3])
@@ -38,7 +37,7 @@
 "	   |--------------------------------|-------|-------|-----------------| || |---------|----------|-----------------|
 call s:ColorDictParser({
 	\   'Normal'                      : [    231,     16,               '',      'ffffff',  '000000',               '']
-	\ , 'Visual'                      : [    240,    253,               '',      '585858',  'dadada',               '']
+	\ , 'Visual'                      : [    232,    253,               '',      '585858',  'dadada',               '']
 	\
 	\ , 'Cursor'                      : [     '',     '',               '',      'ffffff',  'dd4010',               '']
 	\ , 'lCursor'                     : [     '',     '',               '',      'ffffff',  '89b6e2',               '']
@@ -98,13 +97,13 @@ call s:ColorDictParser({
 	\ , 'Include'                     : [    173,     '',               '',      'd7875f',        '',               '']
 	\ , 'PreCondit'                   : [    173,     '',               '',      'd7875f',        '',               '']
 	\ , 'Keyword'                     : [    173,     '',               '',      'd7875f',        '',               '']
-	\ , 'Search'                      : [    231,    131,               '',      '000000',  'ffff5f', 'underline,bold']
+	\ , 'Search'                      : [     17,    131,               '',      '000000',  'ffff5f', 'underline,bold']
 	\ , 'Title'                       : [    231,     '',               '',      'ffffff',        '',               '']
 	\ , 'Delimiter'                   : [    246,     '',               '',      '949494',        '',               '']
 	\ , 'StorageClass'                : [    187,     '',               '',      'd7d7af',        '',               '']
 	\ , 'Operator'                    : [    180,     '',               '',      'd7af87',        '',               '']
 	\
-	\ , 'TODO'                        : [    228,     94,           'bold',      'ffff87',  '875f00',           'bold']
+	\ , 'TODO'                        : [     17,     94,           'bold',      '000000',  '875f00',           'bold']
 	\
 	\ , 'SyntasticWarning'            : [    220,     94,               '',      'ffff87',  '875f00',           'bold']
 	\ , 'SyntasticError'              : [    202,     52,               '',      'ffff87',  '875f00',           'bold']
